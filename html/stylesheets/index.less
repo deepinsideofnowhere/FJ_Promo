@@ -1,0 +1,340 @@
+@fj_gray: #474747;
+@fj_blue: #00a6f0;
+@fj_green: #83cb00;
+.rounded-corners (@radius: 3px) {
+  border-radius: @radius;
+  -o-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+.rounded-corners-down (@radius: 6px) {
+  border-radius: 0 0 @radius @radius;
+  -o-border-radius: 0 0 @radius @radius;
+  -webkit-border-radius: 0 0 @radius @radius;
+  -moz-border-radius: 0 0 @radius @radius;
+}
+.gradient(@from, @to) {
+  background: -moz-linear-gradient(top, @from, @to); /* Firefox 3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@from), color-stop(100%,@to)); /* Chrome 1-9, Safari 4-5 */
+  background: -webkit-linear-gradient(top, @from, @to); /* Chrome 10+, Safari 5.1+ */
+  background: -o-linear-gradient(top, @from, @to); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, @from, @to); /* IE10 */
+  background: linear-gradient(top, @from, @to); /* CSS3 */
+}
+.gradient_green {
+  .gradient(@fj_green, #41b200);
+}
+.box_shadow_active {
+  -o-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Для Firefox */
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Для Safari и Chrome */
+  box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Параметры тени */
+}
+.box_shadow {
+  -o-box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); /* Для Firefox */
+  -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); /* Для Safari и Chrome */
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); /* Параметры тени */
+}
+html {
+  padding:           0;
+  margin:            0;
+  width:              100%;
+  height:             100%;
+  background: url(../images/bg.png);
+    body {
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+      height: 100%;
+      font-family: Bitter-Regular;
+      font-size: 14px;
+      color: @fj_gray;
+      background: url(../images/grad_shadow.png) repeat-x;
+        header {
+          width: 980px;
+          position: relative;
+          height: 105px;
+          margin: 0 auto;
+            .logo {
+              background: url(../images/logo.png);
+              width: 168px;
+              height: 50px;
+              position: relative;
+              top: 35px;
+            }
+            p {
+              position: absolute;
+              top: 50px;
+              left: 180px;
+              width: 150px;
+            }
+            ul {
+              position: relative;
+              right: 0;
+              bottom: 35px;
+              float: right;
+                li {
+                  display: inline-block;
+                  margin: 0 10px;
+                    a {
+                      color: @fj_blue;
+                      text-decoration: underline;
+                      text-transform: uppercase;
+                        &:hover {
+                          text-decoration: none;
+                        }
+                    }
+                    .spacer {
+                      background: url(../images/spacer.png);
+                      height: 50px;
+                      width: 1px;
+                      display: inline-block;
+                      top: 25px;
+                      position: relative;
+                    }    
+                }
+            }
+            
+        }
+        section {
+          width: 1200px;
+          position: relative;
+          margin: 0 auto;
+            h1 {
+              padding-left: 450px;
+              text-indent: -416px;
+              font-size: 60px;
+              font-family: Bitter-Bold;
+              text-transform: uppercase;
+              position: relative;
+              top: 38px;
+              line-height: 55px;
+              background: url(../images/business.png) no-repeat 37px 66px;
+              left: 110px;
+            }
+            h2 {
+              padding-left: 450px;
+              text-indent: -416px;
+              line-height: 55px;
+              font-size: 24px;
+              position: absolute;
+              background: url(../images/rest.png) no-repeat 770px 53px;
+              width: 980px;
+              left: 110px;
+            }
+            div.helps_list {
+              position: relative;
+              height: 271px !important;
+              top: 50px;
+              left: 175px;
+                .list_label {
+                  line-height: 271px;
+                  font-size: 24px;
+                  display: inline-block;
+                  position: relative;
+                  top: -113px;
+                }
+                .list {
+                  background: url(../images/curly_bracket.png) no-repeat 10px 0;
+                  padding-left: 55px;
+                  height: 271px;
+                  position: relative;
+                  display: inline-block;
+                    dt {
+                      color: @fj_green;
+                      margin: 17px 0 5px 0;
+                      font-size: 24px;
+                    }
+                    dd {
+                      color: @fj_gray;
+                      margin: 5px 0 17px 0;
+                      font-size: 18px;
+                    }
+                }
+            }
+            .subscribe {
+              position: relative;
+              width: 490px;
+              margin: 80px auto 0 auto;
+                label {
+                  display: block;
+                  font-size: 18px;
+                }
+                  span {
+                    font-size: 14px;
+                  }
+                input[type=text] {
+                  font-family: Bitter-Regular;
+                  color: @fj_gray;
+                  font-size: 14px;
+                  .rounded-corners;
+                  margin-top: 15px;
+                  width: 320px;
+                  display: inline-block;
+                }
+                input[type=submit] {
+                  display: inline-block;
+                  width: 141px;
+                  height: 28px;
+                  background: url(../images/button.png) 0 0;
+                  .box_shadow;
+                  color: white;
+                  text-transform: uppercase;
+                  text-align: center;
+                  font-size: 12px;
+                  font-family: Bitter-Regular;
+                  text-decoration: none;
+                  line-height: 20px;
+                  margin: 0 10px;
+                  border: none;
+                  .rounded-corners;
+                  cursor: pointer;
+                  &:hover {
+                    background-position: 0 -28px;
+                    .box_shadow_active;
+                    }
+                }            
+            }
+            .arc {
+              width: 1200px;
+              height: 347px;
+              background: url(../images/arc_bg.png);
+              position: relative;
+                .demo_1 {
+                  display: inline-block;
+                  position: relative;
+                  padding-top: 250px;
+                    p {
+                      text-align: center;
+                      color: white;
+                      height: 50px !important;
+                      line-height: 18px;
+                        span {
+                          font-size: 16px;
+                          font-family: Bitter-Bold;
+                        }
+                    }
+                }
+                .instrument {
+                  background: url(../images/instrument.png) no-repeat 190px 50px;
+                  width: 427px;
+                  top: -18px;
+                    p {
+                      padding-left: 132px;
+                    }
+                }
+                .dashboard {
+                  background: url(../images/dashboard.png) no-repeat 79px 50px;
+                  width: 340px;
+                }
+                .graphics {
+                  background: url(../images/graphics.png) no-repeat 54px 50px;
+                  width: 427px;
+                    p {
+                      padding-right: 132px;
+                    }
+                }
+            }
+            .steps {
+              background: url(../images/steps.png) no-repeat 105px 40px;
+              height: 250px;
+              width: 100%;
+                ul {
+                  position: relative;
+                  top: 182px;
+                  left: 100px;
+                    li {
+                      width: 240px;
+                      text-align: center;
+                      display: inline-block;
+                      line-height: 16px;
+                      margin: 0 4px;
+                        span {
+                          display: inline-block;
+                          top: -14px;
+                          position: relative;
+                        }
+                    }
+                }
+            }
+            .partners {
+              height: auto;
+              background: url(../images/carbon_bottom.png);
+              padding-bottom: 100px;
+                .subscribe {
+                  top: 50px;
+                  margin: 0 auto;
+                    label {
+                  color: white;
+                  }
+                    span {
+                      color: #909090;
+                    }
+                }
+                p {
+                  color: white;
+                  width: 490px;
+                  margin: 0 auto;
+                  top: 75px;
+                  line-height: 16px;
+                   position: relative;
+                    span {
+                      color: #909090;
+                      font-size: 12px;
+                       line-height: 16px;
+                    }
+                    a {
+                      color: @fj_blue;
+                      text-decoration: underline;
+                        &:hover {
+                          text-decoration: none;
+                        }
+                    }    
+                }
+            }
+            .learn_more {
+              .rounded-corners-down;
+              background: url(../images/carbon_bg.png);
+              width: 230px;
+              position: relative;
+              margin: 0px auto;
+              font-size: 12px;
+              color: white;
+              padding: 12px 0px 12px 10px;
+              cursor: pointer;
+                span {
+                  display: inline-block;
+                  width: 36px;
+                  height: 6px;
+                  background: url(../images/arrow.png) no-repeat 50% 0;
+                }
+            }    
+        }
+        footer {
+          width: 980px;
+          position: relative;
+          height: 50px;
+          margin: 0 auto;
+          font-size: 12px;
+          color: #b6b6b6;
+            ul {
+              position: relative;
+              top: 0;
+              right: 0;
+              float: right;
+                li {
+                  display: inline-block;
+                  margin: 0 10px;
+                    a {
+                      color: @fj_blue;
+                      text-decoration: underline;
+                        &:hover {
+                          text-decoration: none;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}
