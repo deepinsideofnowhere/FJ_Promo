@@ -1,0 +1,99 @@
+@fj_gray: #474747;
+@fj_blue: #00a6f0;
+@fj_green: #83cb00;
+.hidden {
+  display: none;
+}
+html {
+  padding:           0;
+  margin:            0;
+  height:             100%;
+  background: url(../images/bg.png);
+    body {
+      position: relative;
+      height: 100%;
+      font-family: Bitter-Regular;
+      font-size: 14px;
+      color: @fj_gray;
+        header {
+          width: 980px;
+          position: relative;
+          height: 105px;
+          left: 50%;
+          margin-left: -490px;
+            .logo {
+              background: url(../images/logo.png);
+              width: 168px;
+              height: 50px;
+              position: relative;
+              top: 35px;
+            }
+            p {
+              position: absolute;
+              top: 50px;
+              left: 180px;
+              width: 150px;
+            }
+            ul {
+              position: relative;
+              right: 0;
+              bottom: 35px;
+              float: right;
+                li {
+                  display: inline-block;
+                  margin: 0 10px;
+                    a {
+                      color: @fj_blue;
+                      text-decoration: underline;
+                      text-transform: uppercase;
+                        &:hover {
+                          text-decoration: none;
+                        }
+                    }
+                    .spacer {
+                      background: url(../images/spacer.png);
+                      height: 50px;
+                      width: 1px;
+                      display: inline-block;
+                      top: 25px;
+                      position: relative;
+                    }    
+                }
+            }
+            
+        }
+        section {
+            h1 {
+              font-size: 60px;
+              font-family: Bitter-Bold;
+              text-transform: uppercase;
+            }
+        }
+        footer {
+          width: 980px;
+          position: relative;
+          height: 50px;
+          left: 50%;
+          margin-left: -490px;
+          font-size: 12px;
+          color: #b6b6b6;
+            ul {
+              position: relative;
+              top: 0;
+              right: 0;
+              float: right;
+                li {
+                  display: inline-block;
+                  margin: 0 10px;
+                    a {
+                      color: @fj_blue;
+                      text-decoration: underline;
+                        &:hover {
+                          text-decoration: none;
+                        }
+                    }
+                }    
+            }
+        }
+    }
+}

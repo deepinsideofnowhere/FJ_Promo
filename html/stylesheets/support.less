@@ -1,0 +1,35 @@
+@fj_gray: #474747;
+@fj_blue: #00a6f0;
+@fj_green: #83cb00;
+body {
+  background: url(../images/grad.png) repeat-x;
+    section {
+      width: 980px;
+      position: relative;
+      left: 50%;
+      margin-left: -490px;
+        article {
+          width: 980px;
+          left: 50%;
+          margin-left: -490px;
+          position: relative;
+            h3 {
+              color: @fj_green;
+              margin: 17px 0;
+              font-size: 24px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 16px;
+              margin: 16px 0;
+                a {
+                  color: @fj_blue;
+                  text-decoration: underline;
+                    &:hover {
+                      text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,12 +1,12 @@
-@fj_gray: #474747;
-@fj_blue: #00a6f0;
-@fj_green: #83cb00;
 .rounded-corners (@radius: 3px) {
   border-radius: @radius;
   -o-border-radius: @radius;
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
 }
+@fj_gray: #474747;
+@fj_blue: #00a6f0;
+@fj_green: #83cb00;
 .rounded-corners-down (@radius: 6px) {
   border-radius: 0 0 @radius @radius;
   -o-border-radius: 0 0 @radius @radius;
@@ -36,82 +36,22 @@
   -webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); /* Для Safari и Chrome */
   box-shadow: 0 0 5px 1px rgba(0,0,0,0.3); /* Параметры тени */
 }
-html {
-  padding:           0;
-  margin:            0;
-  width:              100%;
-  height:             100%;
-  background: url(../images/bg.png);
     body {
-      width: 100%;
-      position: relative;
-      margin: 0 auto;
-      height: 100%;
-      font-family: Bitter-Regular;
-      font-size: 14px;
-      color: @fj_gray;
       background: url(../images/grad_shadow.png) repeat-x;
-        header {
-          width: 980px;
-          position: relative;
-          height: 105px;
-          margin: 0 auto;
-            .logo {
-              background: url(../images/logo.png);
-              width: 168px;
-              height: 50px;
-              position: relative;
-              top: 35px;
-            }
-            p {
-              position: absolute;
-              top: 50px;
-              left: 180px;
-              width: 150px;
-            }
-            ul {
-              position: relative;
-              right: 0;
-              bottom: 35px;
-              float: right;
-                li {
-                  display: inline-block;
-                  margin: 0 10px;
-                    a {
-                      color: @fj_blue;
-                      text-decoration: underline;
-                      text-transform: uppercase;
-                        &:hover {
-                          text-decoration: none;
-                        }
-                    }
-                    .spacer {
-                      background: url(../images/spacer.png);
-                      height: 50px;
-                      width: 1px;
-                      display: inline-block;
-                      top: 25px;
-                      position: relative;
-                    }    
-                }
-            }
-            
-        }
         section {
           width: 1200px;
           position: relative;
-          margin: 0 auto;
+          left: 50%;
+          margin-left: -600px;
             h1 {
               padding-left: 450px;
               text-indent: -416px;
-              font-size: 60px;
-              font-family: Bitter-Bold;
-              text-transform: uppercase;
               position: relative;
               top: 38px;
               line-height: 55px;
               background: url(../images/business.png) no-repeat 37px 66px;
               left: 110px;
+              width: 520px;
             }
             h2 {
               padding-left: 450px;
@@ -120,7 +60,7 @@ html {
               font-size: 24px;
               position: absolute;
               background: url(../images/rest.png) no-repeat 770px 53px;
-              width: 980px;
+              width: 520px;
               left: 110px;
             }
             div.helps_list {
@@ -128,6 +68,7 @@ html {
               height: 271px !important;
               top: 50px;
               left: 175px;
+              width: 900px;
                 .list_label {
                   line-height: 271px;
                   font-size: 24px;
@@ -244,6 +185,7 @@ html {
                   position: relative;
                   top: 182px;
                   left: 100px;
+                  width: 1090px;
                     li {
                       width: 240px;
                       text-align: center;
@@ -261,7 +203,7 @@ html {
             .partners {
               height: auto;
               background: url(../images/carbon_bottom.png);
-              padding-bottom: 100px;
+              padding-bottom: 98px;
                 .subscribe {
                   top: 50px;
                   margin: 0 auto;
@@ -294,6 +236,55 @@ html {
                 }
             }
             .learn_more {
+              position: relative;
+                span.up {
+                  display: block;
+                  width: 100%;
+                  height: 5px;
+                  background: url(../images/border_up.png);
+                }
+                article {
+                  width: 980px;
+                  left: 50%;
+                  margin-left: -490px;
+                  position: relative;
+                    h3 {
+                      color: @fj_green;
+                      margin: 17px 0;
+                      font-size: 24px;
+                        span {
+                          display: inline-block;
+                          width: 16px;
+                          height: 24px;
+                          background: url(../images/green_arrow.png);
+                          position: relative;
+                          top: 4px;
+                        }
+                    }
+                    .center {
+                      text-align: center;
+                      font-size: 28px;
+                    } 
+                    p {
+                      font-size: 14px;
+                      line-height: 16px;
+                      margin: 16px 0
+                    }
+                }
+                span.down {
+                  display: block;
+                  width: 100%;
+                  height: 5px;
+                  background: url(../images/border_down.png);
+                }
+                span.bottom {
+                  background: url(../images/carbon_bg.png);
+                  padding-bottom: 50px;
+                  display: block;
+                  width: 100%;
+                }
+            }
+            .learn_more_switcher {
               .rounded-corners-down;
               background: url(../images/carbon_bg.png);
               width: 230px;
@@ -303,38 +294,11 @@ html {
               color: white;
               padding: 12px 0px 12px 10px;
               cursor: pointer;
-                span {
+                a {
                   display: inline-block;
-                  width: 36px;
-                  height: 6px;
-                  background: url(../images/arrow.png) no-repeat 50% 0;
+                  width: 230px;
+                  background: url(../images/arrow.png) no-repeat 200px 3px;
                 }
             }    
         }
-        footer {
-          width: 980px;
-          position: relative;
-          height: 50px;
-          margin: 0 auto;
-          font-size: 12px;
-          color: #b6b6b6;
-            ul {
-              position: relative;
-              top: 0;
-              right: 0;
-              float: right;
-                li {
-                  display: inline-block;
-                  margin: 0 10px;
-                    a {
-                      color: @fj_blue;
-                      text-decoration: underline;
-                        &:hover {
-                          text-decoration: none;
-                        }
-                    }
-                }    
-            }
-        }
-    }
-}
+    }    
